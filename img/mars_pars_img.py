@@ -59,6 +59,7 @@ def get_file(url):
 def get_name(url):
     try:
         path_url = url.split('/')[-1]
+        path_url = path_url.replace('%20', '_')
         return path_url[:-4]
     except:
         return 'Error'
@@ -84,13 +85,13 @@ def main():
 
 urls = find_img(find_url(osn_url))
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
 
 # print(urls)
 
 prov = find_img(find_url(osn_url))
-print(prov)
+# print(prov)
 print(len(prov))
 
 # print(len(find_title(url)))

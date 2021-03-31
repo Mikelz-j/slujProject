@@ -4,8 +4,8 @@ from openpyxl import Workbook
 
 tic = time()
 
-old_id_list = "list_old_id.xlsx"
-new_id_list = "list_new_id.xlsx"
+old_id_list = "old_cat.xlsx"
+new_id_list = "new_cat.xlsx"
 
 # old_id_list = "list_filter_old.xlsx"
 # new_id_list = "list_filter_new.xlsx"
@@ -16,14 +16,14 @@ def get_file(file):
     return ws
 dd = {}
 
-for i in range(2,1265):
+for i in range(2,4670):
 #for i in range(2,10):
     key_id = str(get_file(old_id_list)['A' + str(i)].value)
     val_id = str(get_file(old_id_list)['B' + str(i)].value)
     dd[key_id] = []
     dd[key_id].append(val_id)
 
-for i in range(2,6376):
+for i in range(2,4702):
 #for i in range(2, 8):
     key_id = str(get_file(new_id_list)['A' + str(i)].value)
     val_id = str(get_file(new_id_list)['B' + str(i)].value)
@@ -57,7 +57,7 @@ for i in fin_dd:
     n = n + 1
 
 
-wb.save('rez.xlsx')
+wb.save('rez_cat.xlsx')
 
 print('Ok')
 toc = time()

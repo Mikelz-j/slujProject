@@ -1,2 +1,2 @@
-s = ' Для телефонов Iridium [7884]'
-print(s.split()[-1][1:-1])
+s = '15934;Yealink SIP-T53;3841'
+print(s.split(';')[-1])
